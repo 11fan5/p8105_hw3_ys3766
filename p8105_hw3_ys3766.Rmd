@@ -327,7 +327,7 @@ The above violin plots show the distribution of ride duration by month, membersh
 
 Most of the rides are within an hour, with outliers extending into 3/4 hours. The modes for all plots are at shorter ride duration, about 10 minutes. 
 
-Members tend to have shorter ride duration compared to casual riders, regardless of bike types and month. 
+Members tend to have shorter ride duration and narrower distribution compared to casual riders, regardless of bike types and month. 
 
 Distribution for electric bikes tend to be more concentrated at shorter ride duration compared to classic bikes, possibly due to ease of riding that lead to quicker trip. Classic bikes shows wider distribution of ride duration, especially among casual riders, indicating the variability in how they are used. 
 
