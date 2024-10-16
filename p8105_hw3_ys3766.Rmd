@@ -163,7 +163,7 @@ nhanes_df %>%
   geom_point()+
   geom_smooth(se = FALSE)+
   facet_grid(.~ education)+
-  labs(title = "Total Activity by Age and Education",
+  labs(title = "Total Activity by Age , Sex and Education",
        x = "Age", 
        y = "Total Activity")
 ```
@@ -255,12 +255,12 @@ Table for total number of rides in each combination of year and month, separatin
 citibike %>% 
   group_by(year, month, member_casual) %>% 
   summarise(total_rides = n(), .groups = 'drop') %>% 
-    knitr::kable(
-    col.names = c("Year", "Month", "Member Type", "Total Rides")
+  pivot_wider(names_from = member_casual, values_from = total_rides) %>%  
+    knitr::kable(col.names = c("Year", "Month", "Casual", "Member")
     )
 ```
 
-For all 4 months, more rides were by members than casual. July sees more rides than January in both 2020 and 2024. The number of rides increased from 2020 to 2024, for both member types and both months. 
+For all 4 months,  members have more rides than casual. July sees more rides than January in both 2020 and 2024. The number of rides increased from 2020 to 2024, for both member types and both months. 
 
 Table for the 5 most popular starting stations for July 2024, with number of rides oroginating from these stations
 ```{r}
